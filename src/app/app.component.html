@@ -1,0 +1,18 @@
+
+<div>
+    <div class="py-2">
+      <label for="audioFile">Upload Your File Here</label>
+      <input #audioFile name="audioFile" id="audio-file" type="file" accept="mp3" />
+    </div>
+    <div class="py-2" id="status"></div>
+    <div class="py-2">
+      <button (click)="handleStartRecording()" class="btn btn-primary" id="start-recording">Start Recording</button>
+      <button (click)="handleStopRecording()" class="btn btn-danger" id="stop-recording">Stop Recording</button>
+    </div>
+    <div class="py-2">
+      <button (click)="handleStartMicrophone()" class="btn btn-primary" id="start-microphone">Start Microphone</button>
+      <button (click)="handleStopMicrophone()" class="btn btn-danger" id="stop-microphone">Stop Microphone</button>
+    </div>
+    <textarea id="transcripted-text" [value]="final" rows="30" cols="100"></textarea>
+  </div>
+<router-outlet></router-outlet>
